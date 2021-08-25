@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<title>Latihan 3.4</title>
+	</head>
+<body>
+	<h2>Form Biografi</h2>
+	<form name="Biografi">
+		<table>
+			<tr>
+				<td>Nama Lengkap</td>
+				<td><input name="nama" type="text" size="30" maxlength="50" placeholder="Masukkan Nama"></td>
+			</tr>
+			
+			<tr>
+				<td>Tempat/Tanggal Lahir</td>
+				<td><input name="Tempat Lahir" type="text" size="8" maxlength="10" placeholder="Tempat">
+					<input type="date" min="1990-1-1" max="2010-12-31">
+			</tr>
+			
+			<tr>
+				<td>Jurusan/Program Studi</td>
+				<td>
+				<input name="Jurusan" type="text" size="20" maxlength="30" placeholder="Jurusan">
+				<input name="Prodi" type="text" size="30" maxlength="50" placeholder="Program Studi"></td>
+			</tr>
+			
+			<tr>
+				<td>Semester</td>
+				<td>
+					<input name="Semester" type="number" min="0" max="6">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Kelas</td>
+				<td>
+					<select name="Kelas" required>
+						<option value=""></option>
+						<option value="1">A</option>
+						<option value="2">B</option>
+						<option value="3">C</option>
+						<option value="4">D</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>NIM</td>
+				<td><input name="nim" type="number" min="3201916000" max="3201916999" placeholder="Masukkan Nim">#Batas 3201916999</td>
+			</tr>
+			
+			<tr>
+				<td>Jenis Kelamin</td>
+				<td>
+					<input name="gender" type="radio">Laki-laki
+					<input name="gender" type="radio">Perempuan
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Agama</td>
+				<td>
+					<input name="religion" type="radio">Islam
+					<input name="religion" type="radio">Khatolik
+					<input name="religion" type="radio">Protestan
+					<input name="religion" type="radio">Budha
+					<input name="religion" type="radio">Hindu
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Status</td>
+				<td>
+					<input name="status" type="checkbox">Kawin
+					<input name="status" type="checkbox">Belum Kawin
+				</td>
+			</tr>
+
+			<tr>
+				<td>Alamat</td>
+				<td>
+					<textarea name="alamat"rows="4"cols="40" placeholder="Masukkan alamat"></textarea>
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit"value="Kirim">
+					<input type="reset"value="Reset">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

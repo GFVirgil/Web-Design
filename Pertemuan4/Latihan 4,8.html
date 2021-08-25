@@ -1,0 +1,74 @@
+<html>
+	<head>
+			<title>Latihan 4.8</title>
+	</head>
+<body>
+	<canvas id="Canvas1" width="1000" height="1000">
+		style="border:1px solid #d3d3d3;"
+	Browser tidak support.
+	</canvas>
+	
+	<script>
+	var c = document.getElementById("Canvas1");
+	var ctx = c.getContext("2d");
+	
+	// Depan
+	ctx.beginPath();
+	ctx.moveTo(100,100);
+	ctx.lineTo(250,100);
+	
+	ctx.moveTo(250,250);
+	ctx.lineTo(250,100);
+	
+	ctx.moveTo(100,250);
+	ctx.lineTo(250,250);
+	
+	ctx.moveTo(100,100);
+	ctx.lineTo(100,250);
+	
+	
+	// Atas
+	ctx.moveTo(150,60);
+	ctx.lineTo(100,100);
+	
+	ctx.moveTo(150,60);
+	ctx.lineTo(300,60);
+	
+	ctx.moveTo(250,100);
+	ctx.lineTo(300,60);
+	
+	// Kiri
+	ctx.moveTo(150,60);
+	ctx.lineTo(150,200);
+	
+	ctx.moveTo(100,250);
+	ctx.lineTo(150,200);
+	
+	// Kanan
+	ctx.moveTo(300,60);
+	ctx.lineTo(300,200);
+	
+	ctx.moveTo(300,200);
+	ctx.lineTo(250,250);
+	
+	// Belakang
+	ctx.moveTo(300,200);
+	ctx.lineTo(150,200);
+	ctx.closePath;
+	// Segitiga
+	ctx.moveTo(600,40);
+	ctx.lineTo(450,247);
+	
+	ctx.moveTo(600,40);
+	ctx.lineTo(750,247);
+	
+	ctx.moveTo(450,247);
+	ctx.lineTo(750,247);
+	ctx.closePath();
+	
+	ctx.moveTo(675,168);
+	ctx.arc(600,170,75,0,8*Math.PI);
+	ctx.stroke();
+	</script>
+</body>
+</html>
