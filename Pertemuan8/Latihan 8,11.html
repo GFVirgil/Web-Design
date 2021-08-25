@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Latihan 8.11</title>
+		<script>
+			function psn(message)
+			{
+				alert(message);
+			}
+			function gantiWarna() 
+			{
+				var pesan = document.getElementById('pesan');
+				var button = document.getElementById('tombolWarna');
+				if (button.innerHTML=="Hijau")
+				{
+					pesan.style.cssText="background-color: green;";
+					button.innerHTML="Merah";
+				}
+				else if (button.innerHTML=="Merah") 
+				{
+					pesan.style.cssText="background-color: red;";
+					button.innerHTML="Biru";
+				}
+				else if (button.innerHTML=="Biru") 
+				{
+					pesan.style.cssText="background-color: Blue;";
+					button.innerHTML="Kuning";
+				}
+				else if (button.innerHTML=="Kuning") 
+				{
+					pesan.style.cssText="background-color: Yellow;";
+					button.innerHTML="Hijau";
+					psn('Warna terakhir');
+				}
+			}
+			</script>
+	</head>
+	<body>
+		<div id="pesan"><h1>Welcome</h1></div>
+		
+		<button id="tombolWarna" onclick="gantiWarna()">Hijau</button>
+		
+		
+		
+	
+	<p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+	</body>
+</html>

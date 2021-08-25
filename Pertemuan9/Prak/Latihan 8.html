@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Javascript event handler:onFocus & onBlur</title>
+	</head>
+		<script type="text/javascript">
+            function checkEmail(email)
+            {
+                if(email.length>0)
+                {
+                    if(email.indexOf(' ')>=0)
+                    alert("tidak boleh ada spasi pada alamat e-mail");
+                    else if(email.indexOf('@')==-1)
+                    alert("harus ada simbol @ pada alamat e-mail");
+                }
+            }
+        </script>
+	<body>
+		<form>
+			name:	<input name="fullname" onfocus="alert('Masukkan nama lengkap')"> <br> <br>
+			email:	<input name="email" onBlur="checkEmail(this.value)">
+		</form>
+	
+	<p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+	</body>
+</html>

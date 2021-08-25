@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>Javascript event handler:onChange</title>
+	</head>
+		<body>
+		<script type="text/javascript">
+		<!--
+			function orderTotal(oform, prefix)
+            {
+                //set referensi dari nama field
+                var qty = oform[prefix+"_qty"];
+                var stHold = oform[prefix+"_stHold"];
+                var price = oform[prefix+"_price"];
+                var stVis = oform[prefix+"_stVis"];
+                
+                //abaikan field kosong
+                if(qty=="")return;
+                
+                //kosongkan field kalau nilainya di
+                //bawah 1 atau bukan angka
+                if(isNaN(qty.value)||(qty.value<=0))
+                {
+                    qty.value="";
+                    stHold.value="";
+                }
+                
+                //hitung total harga
+                else
+                    stHold.value=(Math.round(qty.value*price.value*100))/100;
+                visTotal(oform, prefix);
+            }
+            
+            function visTotal(oform, prefix)
+            {
+                var stHold = oform[prefix+"_stHold"];
+                var stVis = oform[prefix+"_stVis"];
+                
+                if(stVis.value!=stHold.value)
+                    stVis.value=stHold.value;
+            }
+		// -->
+		</script>	
+		
+		<form>
+		<table border cellpadding=3>
+		<!-- table titles -->
+		<tr bgcolor=#99CCFF">
+		<th>barang</td>
+		<th>jumlah</td>
+		<th>harga</td>
+		<th>total</td>
+		</tr>
+		
+		<!-- v-neck sweater -->
+		<tr bgcolor="#FFFFCC">
+			<td>v-neck sweater</td>
+			<td><input type=text name="vn_qty" size=3 onChange="orderTotal(this.form, 'vn')"></td>
+			<td><input type=hidden name="vn_price" value="33.95">$33.95</td>
+			<td align=right>
+			<input type=hidden name="vn_stHold">
+			<input type=text name="vn_stVis" size=10 onChange="visTotal(this.form, 'vn')"></td>
+		</tr>
+		
+		<!-- JoAnn style blazer -->
+		<tr bgcolor="#FFFFCC">
+			<td>JoAnn style blazer</td>
+			<td><input type=text name="ja_qty" size=3 onChange="orderTotal(this.form, 'ja')"></td>
+			<td><input type=hidden name="ja_price" value="99.95">$99.95</td>
+			<td align=right>
+			<input type=hidden name="ja_stHold">
+			<input type=text name="ja_stVis" size=10 onChange="visTotal(this.form, 'ja')"></td>
+		</tr>
+
+			</table>
+			
+			<p><input type=submit value="Submit"></p>
+		</form>
+	
+	<p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+	</body>
+</html>

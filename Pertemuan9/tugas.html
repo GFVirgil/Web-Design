@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>Tugas Teori</title>
+		<script>        
+			function setBG()
+			{
+				document.getElementById("ME").style.backgroundColor="blue";
+				document.body.style.cursor="pointer";
+			}
+			function changeBG()
+			{
+				document.getElementById("ME").style.backgroundColor="red";
+			}
+			function delBG()
+			{
+				document.getElementById("ME").style.backgroundColor="";
+			}
+			function pesan()
+			{
+				alert("Mouse Click");
+			}
+		
+			document.querySelector('html').onclick=function()
+            {
+                alert('Ohh, halaman diklik !');
+            }
+        </script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="header">
+				<h1>Gabriel Fikri Virgiawan</h1>
+				<button>ganti user</button><!--Tambahkan-->
+				<p>Membuat Template</p>
+			</div>
+		</div>
+		<div class="badan">
+			<div class="sidebar">
+				sidebar
+				<ul>
+					<li><a href="#">Menu 1</a></li>
+					<li><a href="#">Menu 2</a></li>
+					<li><a href="#">Menu 3</a></li>
+					<li><a href="#">Menu 4</a></li>
+				</ul>
+			</div>
+			<div class="content" id="ME" onmouseover="setBG()" onmouseout="delBG()" onclick="changeBG(),pesan()">
+				<img src="Logo Elektro.png" width="50%">
+				
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="footer">
+			footer
+		</div>		
+		
+		<script src="main.js"></script>
+	
+	<p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+	</body>
+</html>

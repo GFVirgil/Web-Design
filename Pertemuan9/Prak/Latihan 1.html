@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script type ="text/javascript">
+			function validasi()
+			{
+				var x=document.forms["biodata"]["nama"].value;
+				if (x==null || x == "") 
+				{
+					alert("Nama harus diisi");
+				} else 
+				{
+					alert(x);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name ="biodata" action="#" onsubmit="return validasi()"
+			method="post">
+		Nama anda: <input type="text" name="nama">
+		<input type="submit" value="Submit">
+		</form>
+	
+	<p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+	</body>
+</html>

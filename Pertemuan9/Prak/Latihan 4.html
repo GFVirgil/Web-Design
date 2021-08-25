@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Event Registration Models</title>
+		<style type ="text/css">
+			div { padding: 5px;
+				  margin: 10px;
+				  border: 3px solid #0000BB;
+				  width: 12em
+				}
+		</style>
+		
+		<script type ="text/javascript">
+			function handleEvent()
+			{
+				alert( "The event was successfully handled." );
+			}
+			function registerHandler()
+			{
+				var traditional = document.getElementById( "traditional" );
+				traditional.onclick = handleEvent;
+			}
+			//-->
+		</script>
+	</head>
+	<body onload = "registerHandler()">
+		<div id="traditional">Traditional registration model</div>
+	
+	<p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+	</body>
+</html>

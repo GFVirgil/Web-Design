@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>OnMouseMove Event Handler</title>
+		<style type="text/css">
+			#camap {position:absolute; left:20; top:120}
+			#ormap {position:absolute; left:80; top:120}
+			#wamap {position:absolute; left:140; top:120}
+		</style>
+		<script language="Javascript">
+            // global variables used while dragging
+            var offsetX = 0
+            var offsetY = 0
+            var selectedObj
+            var frontObj
+
+            // set document-level event handlers
+            document.onmousedown = engage
+            document.onmouseup = release
+
+            // positioning an object at a specific pixel coordinate
+            function shiftTo(obj, x, y) {
+                obj.style.left = x + 'px'
+                obj.style.top = y + 'px'
+            }
+            // setting the z-order of an object
+            function bringToFront(obj) {
+                if (frontObj) {
+                    frontObj.style.zIndex = 0
+                }
+                frontObj = obj
+                frontObj.style.zIndex = 1
+            }
+        //set global var to a reference to dragged element
+        function setSelectedObj(){
+            var imgObj=window.event.srcElement
+            if (imgObj.id.indexOf("map")==2){
+                selectedObj=imgObj
+                bringToFront(selectedObj)
+                return
+            }
+            selectedObj=null
+            return
+        }
+        //do the dragging (called repeatedly by onMouseMove)
+        function dragIt(){
+            if(selectedObj){
+            shiftTo(selectedObj,(event.clientX-offsetX),(event.clientY-offsetY))
+            return false
+            }
+        }
+        //set global vars and turn on mousemove trapping (called by onMouseDown)
+        function engage(){
+        setSelectedObj()
+            if (selectedObj){
+                document.onmousemove=dragIt
+                offsetX=window.event.offsetX-document.body.scrollLeft
+                offsetY=window.event.offsetY-document.body.scrollTop
+            }
+        }
+        //restore everything as before (called by onMouseUp)
+        function release(){
+            if (selectedObj){
+                document.onmousemove=null
+                selectedObj=null
+            }
+        }
+        </script>
+	</head>
+	<body>
+		<h1>onMouseMove Event Handler</h1>
+		<hr>
+		Click and drag the Images
+		<img id="camap" src="red.jpg" width="10%"><br>
+		<img id="ormap" src="blue.png" width="10%"><br>
+		<img id="wamap" src="green.png" width="10%"><br>
+		<br><br>
+	
+	<p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+	</body>
+</html>

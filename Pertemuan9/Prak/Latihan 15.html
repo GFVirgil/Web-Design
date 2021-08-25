@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Javascript event handler: onError</title>
+	</head>
+		<script type="text/javascript">
+			window.onerror = ErrorSetting;
+			var e_msg = "";	var e_file = "";	var e_line = "";
+			document.form[0].value = "myButton";
+			function ErrorSetting(msg, file_loc, line_no) 
+			{
+				e_msg = msg;
+				e_file = file_loc;
+				e_line = line_no;
+				return true;
+			}
+			function display()
+			{
+				var error_d = "Error in file: " + e_file +
+								"\nline number:" + e_line +
+								"\nMessage:" + e_msg;
+				alert("Error Window:\n" + error_d);
+			}
+		</script>
+	<body>
+		<form>
+			<input type="button" value="Tunjukkan pesan error" onClick="display()">
+		</form>
+	
+	<p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+	</body>
+</html>
