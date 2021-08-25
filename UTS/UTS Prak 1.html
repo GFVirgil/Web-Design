@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>UTS Praktikum 1</title>
+</head>
+<style>
+	body {background-color:yellow;}
+</style>
+<body>
+    <form action="proses.php" method="POST">
+        <fieldset>
+        <legend>Registrasi</legend>
+        <p>
+            <label>Nama:</label>
+            <input type="text" name="nama" maxlength="40" placeholder="Nama lengkap..." required />
+        </p>
+        <p>
+            <label>Tanggal Lahir</label>
+            <input type="date" name="tanggal" required />
+        </p>
+        <p>
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Your email..." required />
+        </p>
+        <p>
+            <label>Password:</label>
+            <input type="password" name="pass" placeholder="Password..." required />
+        </p>
+		  <p>
+            <label>Nomor HP:</label>
+            <input type="number" name="NoHP"/>
+        </p>
+        <p>
+            <label>Jenis kelamin:</label>
+            <label><input type="radio" name="j_kelamin" value="laki-laki"/> Laki-laki</label>
+            <label><input type="radio" name="j_kelamin" value="perempuan"/> Perempuan</label>
+        </p>
+        <p>
+            <label>Game:</label>
+            <select name="Game">
+                <option value="PUBGM">PUBGM</option>
+                <option value="GI">Genshin Impact</option>
+                <option value="Valorant">Valorant</option>
+                <option value="HI">Honkai Impact 3</option>
+            </select>
+        </p>
+		<p>
+            <label>Foto:</label>
+            <input type="file" name="foto" required />
+        </p>
+		<p>
+            <label>Foto Akun:</label>
+            <input type="file" name="F_Acc" required />
+        </p> 
+        <p>
+            <label>Alamat:</label>
+            <textarea name="alamat" placeholder="Masukkan alamat anda!"></textarea>
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Daftar" />
+        </p>
+        </fieldset>
+    </form>
+	<p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+</body>
+</html>

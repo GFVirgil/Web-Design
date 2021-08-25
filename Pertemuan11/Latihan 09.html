@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Remove Element</title>
+        <script src="jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("button").click(function() 
+                {
+                    $("p").remove(".pertama, .kedua");
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+        <p>Aku suka belajar.</p>
+        <p class="pertama">Element p dengan class ="pertama".</p>
+        <p class="pertama">Element p dengan class="pertama".</p>
+        <p class="kedua">Element p dengan class="kedua".</p>
+
+        <button>Remove semua element p dengan class="pertama" dan class="kedua"</button>
+
+        <p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Menggunakan Callback</title>
+        <script src="jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("button").click(function() 
+                {
+                    $("p").hide("slow", function() 
+                    {
+                        alert("Paragraf sudah disembunyikan");
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+        <button>Sembunyikan</button>
+
+        <p>Paragraf ini akan disembunyikan</p>
+
+        <p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+    </body>
+</html>

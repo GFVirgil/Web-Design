@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Getter</title>
+        <script src="jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#tombol1").click(function() 
+                {
+                    alert("Text : " + $ ("#test").text());
+                });
+                $("#tombol2").click(function() 
+                {
+                    alert("HTML : " + $ ("#test").html());
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+        <p id="test">Tulisan ini <i>Miring</i> dalam sebuah paragraf.</p>
+
+        <button id="tombol1">Tampilkan Kalimat</button>
+        <button id="tombol2">Tampilkan HTML</button>
+
+        <p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+    </body>
+</html>

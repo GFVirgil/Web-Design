@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Chaining slide up/slide down</title>
+        <script src="jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("button").click(function() 
+                {
+                    $("#p1").css("color", "red")
+                        .slideUp(2000)
+                        .slideDown(2000);
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+        <p id="p1">Naik dan turun</p>
+
+        <button>Klik dong !</button>
+
+        <p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+    </body>
+</html>

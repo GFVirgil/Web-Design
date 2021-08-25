@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Tugas</title>
+        <script src="jquery-3.6.0.js"></script>
+        <script>
+           $(document).ready(function() 
+           {
+               $("#tombol").mouseenter(function()
+               {
+                   $(".box").show();
+                   $("#r1").show()
+                    .slideUp(5000);
+
+
+               });
+               $("#tombol").mouseleave(function()
+               {
+                   $(".box").hide();
+                   $("#r1").hide();
+               });
+               $("#hapus").dblclick(function()
+               {
+                   $("button").remove("#tombol");
+                   alert("Anda menghapus aku, refresh untuk mengembalikan aku")
+               })
+           });
+           function spam() 
+           {
+               $("#hapus").before("Jangan Ditekan! ");
+           }
+        </script>
+
+        <style>
+            .box
+            {
+                height: 32px;
+                width: 280px;
+                background: cyan;
+                display: none;
+                font-size: 30px;
+            }
+
+            #tombol 
+            {
+                padding: 20px;
+                background: lightgreen;
+                font-size: 60px;
+            }
+
+            #r1 
+            {
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="r1">Selamat, anda menemukan rahasia!</div>
+        <button id="tombol" onclick="spam()">aku</button>
+        <br> <br>
+        <div class="box">Jangan tinggalkan aku!</div>
+        
+        <br>
+        <button id="hapus">Jangan ditekan!</button>
+        
+
+        <p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+    </body>
+</html>

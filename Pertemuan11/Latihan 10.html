@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Menambah Class</title>
+        <script src="jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("button").click(function() 
+                {
+                    $ ("h1, h2, p").addClass("warna");
+                    $ ("div").addClass("besar");
+                });
+            });
+        </script>
+        <style>
+            .besar 
+            {
+                font-weight: bold;
+                font-size: xx-large;
+            }
+            .warna 
+            {
+                color: brown;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>Politeknik Negeri Pontianak</h1>
+        <h2>Jursan Teknik Elektro</h2>
+        <p>Program Studi Teknik Informatika</p>
+        <div>Semester 4</div><br>
+
+        <button>Tambah Class ke element</button>
+
+        <p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+    </body>
+</html>

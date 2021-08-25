@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Fadetoogle</title>
+        <script src="jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("button").click(function() 
+                {
+                    $ ("#div1").fadeToggle();
+                    $ ("#div2").fadeToggle("slow");
+                    $ ("#div3").fadeToggle(3000); //3 detik
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+        <p>Penggunaan fadeToggle() dengan kecepatan yang berbeda</p>
+
+        <button>Klik untuk fade in/out kotak</button> <br><br>
+
+        <div id="div1" style="width: 100px; height: 100px; background-color: red;"></div>
+        <br>
+        <div id="div2" style="width: 100px; height: 100px; background-color: green;"></div>
+        <br>
+        <div id="div3" style="width: 100px; height: 100px; background-color: blue;"></div>
+
+        <p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+    </body>
+</html>

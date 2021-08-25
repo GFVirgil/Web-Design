@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Menambah Element</title>
+        <script src="jquery-3.6.0.js"></script>
+        <script>
+            function afterText() 
+            {
+                var txt1 = "<b>Aku </b>";
+                var txt2 = $ ("<i></i>").text("Suka ");
+                var txt3 = document.createElement("b");
+                txt3.innerHTML = "Belajar!";
+                $ ("img").after(txt1, txt2, txt3);
+            }
+        </script>
+    </head>
+    <body>
+
+        <img src="Logo polnep.png" alt="Belajar jQuery" width="300" height="150">
+
+        <p>Klik tombol untuk menampilkan text setelah gambar.</p>
+
+        <button onclick="afterText()">Insert after</button>
+
+        <p><h5> <hr> Gabriel Fikri Virgiawan <br> 3201916110 <br> 4D </h5>
+    </body>
+</html>
